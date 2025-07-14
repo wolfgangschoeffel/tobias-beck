@@ -18,80 +18,109 @@ import imageFeuer from "../img/feuer.webp";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Tobias Beck</title>
+    <meta
+      name="description"
+      content="Tobias Beck is a Berlin-based chef and culinary innovator who is shaping todays and tomorrows culture through his passion for fire-based cooking and a deep appreciation for German cuisine"
+    />
     <Font cssVariable="--font-arimo" preload />
   </head>
   <body>
     <div class="relative">
-      <div class="relative">
+      <div class="group relative">
         <Image
           src={imageFleischerei}
           alt="Fleischerei"
           loading="lazy"
           layout="constrained"
-          class="w-full"
+          class="fade-in-image w-full"
         />
         <p
-          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
         >
           Image Credit
         </p>
       </div>
       <div
-        class="absolute top-0 left-0 flex h-full w-full items-center justify-center text-center text-white"
+        class="pointer-events-none absolute top-0 left-0 flex h-full w-full items-center justify-center text-center text-white"
       >
         <div>
           <h1 class="text-[max(10vw,48px)] leading-none font-bold">
             Tobias Beck
           </h1>
-          <p class="text-[max(16px,1.5vw)]">Chef – Creator – Editor – Author</p>
+          <p class="text-[max(16px,1.5vw)]">
+            <span class="stagger-fade-in" style="animation-delay: 0.5s;"
+              >Chef</span
+            >
+            <span class="stagger-fade-in" style="animation-delay: 0.55s;">
+              –
+            </span>
+            <span class="stagger-fade-in" style="animation-delay: 0.6s;"
+              >Creator</span
+            >
+            <span class="stagger-fade-in" style="animation-delay: 0.65s;">
+              –
+            </span>
+            <span class="stagger-fade-in" style="animation-delay: 0.7s;"
+              >Editor</span
+            >
+            <span class="stagger-fade-in" style="animation-delay: 0.75s;">
+              –
+            </span>
+            <span class="stagger-fade-in" style="animation-delay: 0.8s;"
+              >Author</span
+            >
+          </p>
         </div>
       </div>
     </div>
 
     <div class="grid grid-cols-2">
-      <div class="relative">
+      <div class="group relative">
         <Image
           src={imageMatjes}
           alt="Matjes"
           loading="lazy"
           layout="constrained"
+          class="fade-in-image"
         />
         <p
-          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
         >
           Image Credit
         </p>
       </div>
-      <div class="relative">
+      <div class="group relative">
         <Image
           src={imageTobi}
           alt="Tobias"
           loading="lazy"
           layout="constrained"
+          class="fade-in-image"
         />
         <p
-          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
         >
           Image Credit
         </p>
       </div>
     </div>
 
-    <div class="relative">
+    <div class="group relative">
       <Image
         src={imageRogacki}
         alt="Rogacki"
         loading="lazy"
         layout="constrained"
+        class="fade-in-image"
       />
       <p
-        class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
       >
         Image Credit
       </p>
     </div>
 
-    <div class="relative">
+    <div class="group relative">
       <Image
         src={imageBroiler}
         alt="Broiler"
@@ -100,7 +129,7 @@ import imageFeuer from "../img/feuer.webp";
         class="w-full"
       />
       <p
-        class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
       >
         Image Credit
       </p>
@@ -116,7 +145,7 @@ import imageFeuer from "../img/feuer.webp";
     </div>
 
     <div class="relative flex items-center justify-center">
-      <div class="relative">
+      <div class="group relative">
         <Image
           src={imageFeuer}
           alt="Feuer"
@@ -125,21 +154,21 @@ import imageFeuer from "../img/feuer.webp";
           class="w-full"
         />
         <p
-          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
         >
           Image Credit Feuer
         </p>
       </div>
-      <div class="absolute w-[50%]">
+      <div class="group absolute w-[50%]">
         <Image
           src={imageTobiBallhaus}
           alt="Tobias Ballhaus"
           loading="lazy"
           layout="constrained"
-          class=""
+          class="fade-in-image"
         />
         <p
-          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
         >
           Image Credit
         </p>
@@ -165,14 +194,41 @@ import imageFeuer from "../img/feuer.webp";
       >
     </footer>
 
-    <div class="relative">
-      <video src="/snippet.mp4" autoplay muted playsinline loop class="w-full"
-      ></video>
+    <div class="group relative">
+      <video
+        src="/snippet.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+        class="fade-in-image w-full"></video>
       <p
-        class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[12px] tracking-[0.075em] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
       >
         Video Credit
       </p>
     </div>
   </body>
 </html>
+
+<script>
+  const targets = Array.from(document.querySelectorAll(".fade-in-image"));
+  function callback(
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver,
+  ) {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      if (entry.isIntersecting) {
+        console.log(entry);
+        entry.target.classList.add("fade-in");
+      }
+    });
+  }
+  const observer = new IntersectionObserver(callback, {
+    threshold: 0,
+    rootMargin: "0px 0px -25% 0px",
+  });
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
+</script>

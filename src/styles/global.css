@@ -20,3 +20,30 @@ body {
   background: white;
   color: black;
 }
+
+.fade-in-image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.stagger-fade-in {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  animation: staggerFadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
