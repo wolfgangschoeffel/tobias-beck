@@ -19,4 +19,5 @@ export default defineConfig({
       },
     ],
   },
+  site: "https://tobi.wolfgangschoeffel.com",
 });
