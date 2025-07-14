@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: var(--font-arimo);
+}
+
+::selection {
+  background: white;
+  color: black;
+}

@@ -1,16 +1,118 @@
 ---
-
+import "../styles/global.css";
+import { Font } from "astro:assets";
+import { Image } from "astro:assets";
+import imageRogacki from "../img/berlin-rogacki.webp";
+import imageFleischerei from "../img/fleischerei.webp";
+import imageMatjes from "../img/matjes-broetchen.webp";
+import imageTobi from "../img/tobi.webp";
+import imageBroiler from "../img/broiler.webp";
+import imageTobiBallhaus from "../img/claerchens-ballhaus-tobi-kuechenaufgang.webp";
+import imageFeuer from "../img/feuer.webp";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Tobias Beck</title>
+    <Font cssVariable="--font-arimo" preload />
+  </head>
+  <body>
+    <div class="relative">
+      <Image
+        src={imageFleischerei}
+        alt="Fleischerei"
+        loading="lazy"
+        layout="constrained"
+        class="w-full"
+      />
+      <div
+        class="absolute top-0 left-0 flex h-full w-full items-center justify-center text-center text-white"
+      >
+        <div>
+          <h1 class="text-[max(10vw,48px)] leading-none font-bold">
+            Tobias Beck
+          </h1>
+          <p class="text-[max(16px,1.5vw)]">Chef – Creator – Editor – Author</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2">
+      <Image
+        src={imageMatjes}
+        alt="Matjes"
+        loading="lazy"
+        layout="constrained"
+      />
+      <Image src={imageTobi} alt="Tobias" loading="lazy" layout="constrained" />
+    </div>
+
+    <Image
+      src={imageRogacki}
+      alt="Rogacki"
+      loading="lazy"
+      layout="constrained"
+    />
+
+    <div class="relative">
+      <Image
+        src={imageBroiler}
+        alt="Broiler"
+        loading="lazy"
+        layout="full-width"
+        class="w-full"
+      />
+      <div
+        class="absolute top-0 left-0 flex w-full justify-center px-[50px] pt-[100px] text-center text-[30px] leading-[1.2]"
+      >
+        <p class="max-w-[25em] text-[max(16px,1.5vw)]">
+          A Berlin-based chef and culinary innovator who is shaping todays and
+          tomorrows culture through his passion for fire-based cooking and a
+          deep appreciation for German cuisine
+        </p>
+      </div>
+    </div>
+
+    <div class="relative flex items-center justify-center">
+      <Image
+        src={imageFeuer}
+        alt="Feuer"
+        loading="lazy"
+        layout="full-width"
+        class="w-full"
+      />
+      <Image
+        src={imageTobiBallhaus}
+        alt="Tobias Ballhaus"
+        loading="lazy"
+        layout="constrained"
+        class="absolute w-[50%]"
+      />
+    </div>
+
+    <div class="px-[50px] py-[100px] text-center">
+      <p class="text-[max(16px,1.5vw)]">
+        Executive Chef – Clärchens Ballhaus<br />
+        Founder – Ember, Open Fire Cooking<br />
+        Founder & Editor-in-Chief – Gutgeist Magazin<br />
+        Creator & Author – Deutschland, Dein Essen
+      </p>
+    </div>
+    <footer class="flex gap-[20px] px-[50px] py-[50px] text-[max(16px,1.5vw)]">
+      <a href="">Instagram</a>
+      <a href="">Vimeo</a>
+      <a
+        class="ml-auto"
+        href="mailto:tobias@tobiasbeck.de?subject=Contact%20from%20Website"
+        >contact</a
+      >
+    </footer>
+
+    <video src="/snippet.mp4" autoplay muted playsinline loop class="w-full"
+    ></video>
+  </body>
 </html>
