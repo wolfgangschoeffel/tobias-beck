@@ -9,6 +9,10 @@ import imageTobi from "../img/tobi.webp";
 import imageBroiler from "../img/broiler.webp";
 import imageTobiBallhaus from "../img/claerchens-ballhaus-tobi-kuechenaufgang.webp";
 import imageFeuer from "../img/feuer.webp";
+import { SITE_URL } from "../utils/constants";
+
+const META_DESCRIPTION =
+  "Tobias Beck is a Berlin-based chef and culinary innovator who is shaping todays and tomorrows culture through his passion for fire-based cooking and a deep appreciation for German cuisine";
 ---
 
 <html lang="en">
@@ -18,10 +22,21 @@ import imageFeuer from "../img/feuer.webp";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Tobias Beck</title>
-    <meta
-      name="description"
-      content="Tobias Beck is a Berlin-based chef and culinary innovator who is shaping todays and tomorrows culture through his passion for fire-based cooking and a deep appreciation for German cuisine"
-    />
+    <meta name="description" content={META_DESCRIPTION} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={SITE_URL} />
+    <meta property="og:title" content="Tobias Beck" />
+    <meta property="og:description" content={META_DESCRIPTION} />
+    <meta property="og:image" content={`${SITE_URL}/og-image.webp`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={SITE_URL} />
+    <meta property="twitter:title" content="Tobias Beck" />
+    <meta property="twitter:description" content={META_DESCRIPTION} />
+    <meta property="twitter:image" content={`${SITE_URL}/og-image.webp`} />
     <Font cssVariable="--font-arimo" preload />
   </head>
   <body>
