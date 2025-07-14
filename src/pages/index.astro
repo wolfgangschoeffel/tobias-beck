@@ -22,13 +22,20 @@ import imageFeuer from "../img/feuer.webp";
   </head>
   <body>
     <div class="relative">
-      <Image
-        src={imageFleischerei}
-        alt="Fleischerei"
-        loading="lazy"
-        layout="constrained"
-        class="w-full"
-      />
+      <div class="relative">
+        <Image
+          src={imageFleischerei}
+          alt="Fleischerei"
+          loading="lazy"
+          layout="constrained"
+          class="w-full"
+        />
+        <p
+          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        >
+          Image Credit
+        </p>
+      </div>
       <div
         class="absolute top-0 left-0 flex h-full w-full items-center justify-center text-center text-white"
       >
@@ -42,21 +49,47 @@ import imageFeuer from "../img/feuer.webp";
     </div>
 
     <div class="grid grid-cols-2">
+      <div class="relative">
+        <Image
+          src={imageMatjes}
+          alt="Matjes"
+          loading="lazy"
+          layout="constrained"
+        />
+        <p
+          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        >
+          Image Credit
+        </p>
+      </div>
+      <div class="relative">
+        <Image
+          src={imageTobi}
+          alt="Tobias"
+          loading="lazy"
+          layout="constrained"
+        />
+        <p
+          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        >
+          Image Credit
+        </p>
+      </div>
+    </div>
+
+    <div class="relative">
       <Image
-        src={imageMatjes}
-        alt="Matjes"
+        src={imageRogacki}
+        alt="Rogacki"
         loading="lazy"
         layout="constrained"
       />
-      <Image src={imageTobi} alt="Tobias" loading="lazy" layout="constrained" />
+      <p
+        class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+      >
+        Image Credit
+      </p>
     </div>
-
-    <Image
-      src={imageRogacki}
-      alt="Rogacki"
-      loading="lazy"
-      layout="constrained"
-    />
 
     <div class="relative">
       <Image
@@ -66,6 +99,11 @@ import imageFeuer from "../img/feuer.webp";
         layout="full-width"
         class="w-full"
       />
+      <p
+        class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+      >
+        Image Credit
+      </p>
       <div
         class="absolute top-0 left-0 flex w-full justify-center px-[50px] pt-[100px] text-center text-[30px] leading-[1.2]"
       >
@@ -78,20 +116,34 @@ import imageFeuer from "../img/feuer.webp";
     </div>
 
     <div class="relative flex items-center justify-center">
-      <Image
-        src={imageFeuer}
-        alt="Feuer"
-        loading="lazy"
-        layout="full-width"
-        class="w-full"
-      />
-      <Image
-        src={imageTobiBallhaus}
-        alt="Tobias Ballhaus"
-        loading="lazy"
-        layout="constrained"
-        class="absolute w-[50%]"
-      />
+      <div class="relative">
+        <Image
+          src={imageFeuer}
+          alt="Feuer"
+          loading="lazy"
+          layout="full-width"
+          class="w-full"
+        />
+        <p
+          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        >
+          Image Credit Feuer
+        </p>
+      </div>
+      <div class="absolute w-[50%]">
+        <Image
+          src={imageTobiBallhaus}
+          alt="Tobias Ballhaus"
+          loading="lazy"
+          layout="constrained"
+          class=""
+        />
+        <p
+          class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+        >
+          Image Credit
+        </p>
+      </div>
     </div>
 
     <div class="px-[50px] py-[100px] text-center">
@@ -103,16 +155,24 @@ import imageFeuer from "../img/feuer.webp";
       </p>
     </div>
     <footer class="flex gap-[20px] px-[50px] py-[50px] text-[max(16px,1.5vw)]">
-      <a href="">Instagram</a>
-      <a href="">Vimeo</a>
+      <a class="transition-opacity hover:opacity-60" href="">Instagram</a>
+      <a class="transition-opacity hover:opacity-60" href="">Vimeo</a>
       <a
+        class="transition-opacity hover:opacity-60"
         class="ml-auto"
         href="mailto:tobias@tobiasbeck.de?subject=Contact%20from%20Website"
         >contact</a
       >
     </footer>
 
-    <video src="/snippet.mp4" autoplay muted playsinline loop class="w-full"
-    ></video>
+    <div class="relative">
+      <video src="/snippet.mp4" autoplay muted playsinline loop class="w-full"
+      ></video>
+      <p
+        class="absolute right-0 bottom-0 px-4 py-2 text-[12px] tracking-[0.075em]"
+      >
+        Video Credit
+      </p>
+    </div>
   </body>
 </html>
