@@ -4,11 +4,11 @@ import { Font } from "astro:assets";
 import { Image } from "astro:assets";
 import imageRogacki from "../img/berlin-rogacki.webp";
 import imageFleischerei from "../img/fleischerei.webp";
-import imageMatjes from "../img/matjes-broetchen.webp";
-import imageTobi from "../img/tobi.webp";
-import imageBroiler from "../img/broiler.webp";
+import cloudy1 from "../img/cloudy-1.webp";
+import cloudy2 from "../img/cloudy-2.webp";
+import brezel from "../img/brezel.webp";
 import imageTobiBallhaus from "../img/claerchens-ballhaus-tobi-kuechenaufgang.webp";
-import imageFeuer from "../img/feuer.webp";
+import imageDoor from "../img/door.webp";
 import { SITE_URL } from "../utils/constants";
 
 const META_DESCRIPTION =
@@ -41,21 +41,15 @@ const META_DESCRIPTION =
   </head>
   <body>
     <div class="relative">
-      <div class="group relative">
-        <Image
-          src={imageFleischerei}
-          alt="Fleischerei"
-          loading="lazy"
-          layout="constrained"
-          class="fade-in-image w-full max-md:h-[33vh] max-md:object-cover"
-          tabindex="0"
-        />
-        <p
-          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-        >
-          Image Credit
-        </p>
-      </div>
+      <Image
+        src={imageFleischerei}
+        alt="Fleischerei"
+        loading="lazy"
+        layout="constrained"
+        class="fade-in-image w-full max-md:h-[33vh] max-md:object-cover"
+        tabindex="0"
+      />
+
       <div
         class="pointer-events-none absolute top-0 left-0 flex h-full w-full items-center justify-center text-center text-white"
       >
@@ -71,13 +65,13 @@ const META_DESCRIPTION =
               –
             </span>
             <span class="stagger-fade-in" style="animation-delay: 0.6s;"
-              >Creator</span
+              >Tast Maker</span
             >
             <span class="stagger-fade-in" style="animation-delay: 0.65s;">
               –
             </span>
             <span class="stagger-fade-in" style="animation-delay: 0.7s;"
-              >Editor</span
+              >Creator</span
             >
             <span class="stagger-fade-in" style="animation-delay: 0.75s;">
               –
@@ -91,70 +85,46 @@ const META_DESCRIPTION =
     </div>
 
     <div class="grid grid-cols-2">
-      <div class="group relative">
-        <Image
-          src={imageMatjes}
-          alt="Matjes"
-          loading="lazy"
-          layout="constrained"
-          class="fade-in-image w-full"
-          tabindex="0"
-        />
-        <p
-          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-        >
-          Image Credit
-        </p>
-      </div>
-      <div class="group relative">
-        <Image
-          src={imageTobi}
-          alt="Tobias"
-          loading="lazy"
-          layout="constrained"
-          class="fade-in-image w-full"
-          tabindex="0"
-        />
-        <p
-          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-        >
-          Image Credit
-        </p>
-      </div>
-    </div>
-
-    <div class="group relative">
       <Image
-        src={imageRogacki}
-        alt="Rogacki"
+        src={cloudy1}
+        alt="Matjes"
         loading="lazy"
         layout="constrained"
-        class="fade-in-image w-full max-md:h-[33vh] max-md:object-cover"
+        class="fade-in-image w-full"
         tabindex="0"
       />
-      <p
-        class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-      >
-        Image Credit
-      </p>
+
+      <Image
+        src={cloudy2}
+        alt="Tobias"
+        loading="lazy"
+        layout="constrained"
+        class="fade-in-image w-full"
+        tabindex="0"
+      />
     </div>
 
-    <div class="group relative">
+    <Image
+      src={imageRogacki}
+      alt="Rogacki"
+      loading="lazy"
+      layout="constrained"
+      class="fade-in-image mb-2 w-full max-md:h-[33vh] max-md:object-cover md:mb-3"
+      tabindex="0"
+    />
+
+    <div class="group relative mb-2 md:mb-3">
       <Image
-        src={imageBroiler}
-        alt="Broiler"
+        src={brezel}
+        alt="Brezel"
         loading="lazy"
         layout="full-width"
         class="w-full"
         tabindex="0"
       />
-      <p
-        class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-      >
-        Image Credit
-      </p>
+
       <div
-        class="absolute top-0 left-0 flex w-full justify-center px-[50px] pt-[100px] text-center text-[30px] leading-[1.2]"
+        class="absolute top-0 left-0 flex w-full justify-center px-[50px] pt-[50px] text-center text-[30px] leading-[1.2]"
       >
         <p class="max-w-[25em] text-[max(16px,1.5vw)]">
           A Berlin-based chef and culinary innovator who is shaping todays and
@@ -164,22 +134,21 @@ const META_DESCRIPTION =
       </div>
     </div>
 
-    <div class="relative flex items-center justify-center">
-      <div class="group relative">
-        <Image
-          src={imageFeuer}
-          alt="Feuer"
-          loading="lazy"
-          layout="full-width"
-          class="w-full"
-          tabindex="0"
-        />
-        <p
-          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-        >
-          Image Credit Feuer
-        </p>
-      </div>
+    <div class="relative mb-2 flex items-center justify-center md:mb-3">
+      <p
+        class="absolute top-0 left-0 w-full pt-[50px] text-center text-[clamp(20px,4vw,40px)]"
+      >
+        Neue deutsche küche
+      </p>
+      <Image
+        src={imageDoor}
+        alt="Door"
+        loading="lazy"
+        layout="full-width"
+        class="w-full"
+        tabindex="0"
+      />
+
       <div class="group absolute w-[50%]">
         <Image
           src={imageTobiBallhaus}
@@ -189,20 +158,20 @@ const META_DESCRIPTION =
           class="fade-in-image w-full"
           tabindex="0"
         />
-        <p
-          class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-        >
-          Image Credit
-        </p>
       </div>
     </div>
 
-    <div class="px-[50px] py-[100px] text-center">
+    <div class="bg-black px-[50px] py-[100px] text-center">
       <p class="text-[max(16px,1.5vw)]">
         Executive Chef – <a
           href="https://claerchensball.haus/"
           target="_blank"
-          class="transition-opacity hover:opacity-60">Clärchens Ballhaus</a
+          class="transition-opacity hover:opacity-60">Clärchens</a
+        >
+        <a
+          class="transition-opacity hover:opacity-60"
+          href="https://www.instagram.com/luna.claerchens/"
+          target="_blank">Ballhaus</a
         ><br />
         Founder – <a
           href="https://ember-ofc.com/"
@@ -214,62 +183,107 @@ const META_DESCRIPTION =
           href="https://www.instagram.com/gut_geist/?hl=en"
           target="_blank"
           class="transition-opacity hover:opacity-60">Gutgeist Magazin</a
+        > – <a
+          href="https://faremag.com/products/gut-geist-the-berlin-issue?srsltid=AfmBOoq5LFLh6m9mO5RpkPXXKSijfX_cy7nben463CG15aLFrJgATYdM"
+          target="_blank"
+          class="transition-opacity hover:opacity-60">Buy</a
         ><br />
-        Creator & Author – Deutschland, Dein Essen
+        Creator & Author – Deutschland, Dein Essen (Documentary, coming soon)
       </p>
     </div>
-    <footer class="flex gap-[20px] px-[50px] py-[50px] text-[max(16px,1.5vw)]">
-      <a
-        class="transition-opacity hover:opacity-60"
-        href="https://www.instagram.com/tobiasbeck__/"
-        target="_blank">Instagram</a
-      >
-      <a class="transition-opacity hover:opacity-60" href="" target="_blank"
-        >Vimeo</a
-      >
-      <a
-        class="ml-auto transition-opacity hover:opacity-60"
-        href="mailto:tobias@tobiasbeck.de?subject=Contact%20from%20Website"
-        >contact</a
-      >
-    </footer>
+    <footer
+      class="mb-2 flex flex-col gap-[25vh] bg-black px-[50px] py-[50px] text-[max(16px,1.5vw)] md:mb-3"
+    >
+      <div class="flex flex-wrap gap-[20px] max-md:justify-center">
+        <a
+          class="transition-opacity hover:opacity-60"
+          href="https://www.instagram.com/tobiasbeck__/"
+          target="_blank">Instagram</a
+        >
+        <a class="transition-opacity hover:opacity-60" href="" target="_blank"
+          >Vimeo</a
+        >
+        <a
+          class="transition-opacity hover:opacity-60"
+          href="https://apps.apple.com/us/app/creme-create-memorable-meals/id1638361026"
+          target="_blank">App</a
+        >
 
-    <div class="group relative">
-      <video
-        src="/snippet.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="fade-in-image w-full"
-        tabindex="0"></video>
-      <p
-        class="absolute right-0 bottom-0 translate-y-[5px] px-4 py-2 text-[10px] tracking-[0.075em] opacity-0 transition-all duration-500 group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100 md:text-[12px]"
-      >
-        Video Credit
-      </p>
-    </div>
+        <span class="group relative md:ml-auto">
+          <a
+            href="mailto:Jessica@gut-geist.com"
+            class="transition-opacity hover:opacity-60"
+            title="For exclusive collaborations and professional inquiries"
+            >Collaborations</a
+          >
+          <span
+            class="pointer-events-none absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded bg-white px-2 py-1 text-xs whitespace-nowrap text-black normal-case opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100"
+            style="white-space:nowrap;"
+            >For exclusive collaborations and professional inquiries</span
+          >
+        </span>
+        <a
+          class="transition-opacity hover:opacity-60"
+          href="mailto:hello@gut-geist.com?subject=Contact%20from%20Website"
+          >contact</a
+        >
+      </div>
+      <div class="flex flex-col gap-[20px]">
+        <div class="flex justify-center">Impressum</div>
+        <div class="text-[12px] text-white/50">
+          <p class="mr-[10px] md:inline">
+            <span class="text-white/75">Angaben gemäß § 5 TMG</span> Beck Culinary
+            Arts Group UG – Wiener Straße 10 – 10999 Berlin
+          </p>
+          <p class="mr-[10px] md:inline">
+            <span class="text-white/75">Geschäftsführer</span> Tobias Beck
+          </p>
+          <p class="mr-[10px] md:inline">
+            <span class="text-white/75">Umsatzsteuer-ID</span> DE455095255
+          </p>
+          <p class="mr-[10px] md:inline">
+            <span class="text-white/75">Handelsregister</span> HRB 272425 B
+          </p>
+
+          <p class="mr-[10px] md:inline">
+            <span class="text-white/75">FOTO CREDITS:</span>
+            Nino Valpiani Jonas Kolahdoozan Jose Cuevas
+          </p>
+        </div>
+      </div>
+    </footer>
+    <video
+      src="
+          snippet.mp4"
+      autoplay
+      muted
+      playsinline
+      loop
+      class="fade-in-image w-full"
+      tabindex="0"
+    >
+    </video>
+
+    <script>
+      const targets = Array.from(document.querySelectorAll(".fade-in-image"));
+      function callback(
+        entries: IntersectionObserverEntry[],
+        observer: IntersectionObserver,
+      ) {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          if (entry.isIntersecting) {
+            console.log(entry);
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }
+      const observer = new IntersectionObserver(callback, {
+        threshold: 0,
+        rootMargin: "0px 0px -25% 0px",
+      });
+      targets.forEach((target) => {
+        observer.observe(target);
+      });
+    </script>
   </body>
 </html>
-
-<script>
-  const targets = Array.from(document.querySelectorAll(".fade-in-image"));
-  function callback(
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver,
-  ) {
-    entries.forEach((entry: IntersectionObserverEntry) => {
-      if (entry.isIntersecting) {
-        console.log(entry);
-        entry.target.classList.add("fade-in");
-      }
-    });
-  }
-  const observer = new IntersectionObserver(callback, {
-    threshold: 0,
-    rootMargin: "0px 0px -25% 0px",
-  });
-  targets.forEach((target) => {
-    observer.observe(target);
-  });
-</script>
