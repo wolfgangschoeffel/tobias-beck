@@ -42,48 +42,50 @@ const META_DESCRIPTION =
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org/",
         "@type": "Person",
-        "name": "Tobias Beck",
-        "jobTitle": "Executive Chef",
-        "description": "Berlin-based chef and culinary innovator shaping today's and tomorrow's culture through fire-based cooking and German cuisine",
-        "url": "https://tobias-beck.com",
-        "sameAs": [
+        name: "Tobias Beck",
+        jobTitle: "Executive Chef",
+        description:
+          "Berlin-based chef and culinary innovator shaping today's and tomorrow's culture through fire-based cooking and German cuisine",
+        url: "https://tobias-beck.com",
+        sameAs: [
           "https://www.instagram.com/tobiasbeck__/",
-          "https://vimeo.com/794683775"
+          "https://vimeo.com/794683775",
         ],
-        "worksFor": {
+        worksFor: {
           "@type": "Organization",
-          "name": "Clärchens Ballhaus",
-          "url": "https://claerchensball.haus/"
+          name: "Clärchens Ballhaus",
+          url: "https://claerchensball.haus/",
         },
-        "founder": [
+        founder: [
           {
             "@type": "Organization",
-            "name": "Ember, Open Fire Cooking",
-            "url": "https://ember-ofc.com/"
+            name: "Ember, Open Fire Cooking",
+            url: "https://ember-ofc.com/",
           },
           {
             "@type": "Organization",
-            "name": "Gutgeist Magazin",
-            "url": "https://www.instagram.com/gut_geist/"
-          }
+            name: "Gutgeist Magazin",
+            url: "https://www.instagram.com/gut_geist/",
+          },
         ],
-        "address": {
+        address: {
           "@type": "PostalAddress",
-          "addressLocality": "Berlin",
-          "addressCountry": "DE"
+          addressLocality: "Berlin",
+          addressCountry: "DE",
         },
-        "knowsAbout": [
+        knowsAbout: [
           "German Cuisine",
           "Fire-based Cooking",
           "Culinary Innovation",
-          "Neue deutsche Küche"
-        ]
-      }
-    </script>
+          "Neue deutsche Küche",
+        ],
+      })}
+    />
   </head>
   <body>
     <header class="relative">
