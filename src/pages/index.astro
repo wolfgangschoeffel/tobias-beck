@@ -40,9 +40,53 @@ const META_DESCRIPTION =
     <Font cssVariable="--font-arimo" preload />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tobias Beck",
+        "jobTitle": "Executive Chef",
+        "description": "Berlin-based chef and culinary innovator shaping today's and tomorrow's culture through fire-based cooking and German cuisine",
+        "url": "https://tobias-beck.com",
+        "sameAs": [
+          "https://www.instagram.com/tobiasbeck__/",
+          "https://vimeo.com/794683775"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Clärchens Ballhaus",
+          "url": "https://claerchensball.haus/"
+        },
+        "founder": [
+          {
+            "@type": "Organization",
+            "name": "Ember, Open Fire Cooking",
+            "url": "https://ember-ofc.com/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Gutgeist Magazin",
+            "url": "https://www.instagram.com/gut_geist/"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Berlin",
+          "addressCountry": "DE"
+        },
+        "knowsAbout": [
+          "German Cuisine",
+          "Fire-based Cooking",
+          "Culinary Innovation",
+          "Neue deutsche Küche"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div class="relative">
+    <header class="relative">
       <Image
         src={imageFleischerei}
         alt="Frontal view of a traditional butcher shop"
@@ -84,119 +128,147 @@ const META_DESCRIPTION =
           </p>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="grid grid-cols-2">
-      <Image
-        src={cloudy1}
-        alt="Video Still of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
-        loading="lazy"
-        layout="constrained"
-        class="fade-in-image w-full"
-        tabindex="0"
-      />
+    <main>
+      <section class="grid grid-cols-2">
+        <figure>
+          <Image
+            src={cloudy1}
+            alt="Video Still of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
+            loading="lazy"
+            layout="constrained"
+            class="fade-in-image w-full"
+            tabindex="0"
+          />
+        </figure>
 
-      <Image
-        src={cloudy2}
-        alt="Video Still of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
-        loading="lazy"
-        layout="constrained"
-        class="fade-in-image w-full"
-        tabindex="0"
-      />
-    </div>
+        <figure>
+          <Image
+            src={cloudy2}
+            alt="Video Still of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
+            loading="lazy"
+            layout="constrained"
+            class="fade-in-image w-full"
+            tabindex="0"
+          />
+        </figure>
+      </section>
 
-    <Image
-      src={imageRogacki}
-      alt="Detail shot of smoked fish on a tray at fish market Rogacki in Berlin"
-      loading="lazy"
-      layout="constrained"
-      class="fade-in-image mb-2 w-full max-md:h-[33vh] max-md:object-cover md:mb-3"
-      tabindex="0"
-    />
-
-    <div class="group relative mb-2 md:mb-3">
-      <Image
-        src={brezel}
-        alt="Detail shot of a Pretzel hanging from a wooden stand"
-        loading="lazy"
-        layout="full-width"
-        class="w-full"
-        tabindex="0"
-      />
-
-      <div
-        class="absolute top-0 left-0 flex w-full justify-center px-[50px] pt-[50px] text-center text-[30px] leading-[1.2]"
-      >
-        <p class="max-w-[25em] text-[max(16px,3vw)]">
-          A Berlin-based chef and culinary innovator who is shaping todays and
-          tomorrows culture through his passion for fire-based cooking and a
-          deep appreciation for German cuisine
-        </p>
-      </div>
-    </div>
-
-    <div class="relative mb-2 flex items-center justify-center md:mb-3">
-      <p
-        class="absolute top-0 left-0 w-full pt-[50px] text-center text-[max(24px,4vw)]"
-      >
-        Neue deutsche küche
-      </p>
-      <Image
-        src={imageDoor}
-        alt="A old-school open wooden Door"
-        loading="lazy"
-        layout="full-width"
-        class="w-full"
-        tabindex="0"
-      />
-
-      <div class="group absolute w-[38%]">
+      <figure>
         <Image
-          src={imageTobiBallhaus}
-          alt="Tobias Beck wearing a chef’s outfit standing in front of the kitchen of Claerchens Ballhaus in Berlin"
+          src={imageRogacki}
+          alt="Detail shot of smoked fish on a tray at fish market Rogacki in Berlin"
           loading="lazy"
           layout="constrained"
-          class="fade-in-image w-full"
+          class="fade-in-image mb-2 w-full max-md:h-[33vh] max-md:object-cover md:mb-3"
           tabindex="0"
         />
-      </div>
-    </div>
+      </figure>
 
-    <div class="bg-black px-[50px] py-[100px] text-center">
-      <p class="text-[max(13px,1.5vw)]">
-        Executive Chef – <a
-          href="https://www.instagram.com/luna.claerchens/"
-          target="_blank"
-          class="transition-opacity hover:opacity-60">Clärchens</a
+      <section class="group relative mb-2 md:mb-3">
+        <figure>
+          <Image
+            src={brezel}
+            alt="Detail shot of a Pretzel hanging from a wooden stand"
+            loading="lazy"
+            layout="full-width"
+            class="w-full"
+            tabindex="0"
+          />
+          <figcaption class="sr-only">
+            Traditional German pretzel hanging from a wooden stand
+          </figcaption>
+        </figure>
+
+        <article
+          class="absolute top-0 left-0 flex w-full justify-center px-[50px] pt-[50px] text-center text-[30px] leading-[1.2]"
         >
-        <a
-          class="transition-opacity hover:opacity-60"
-          href="https://claerchensball.haus/"
-          target="_blank">Ballhaus</a
-        ><br />
-        Founder – <a
-          href="https://ember-ofc.com/"
-          target="_blank"
-          class="transition-opacity hover:opacity-60"
-          >Ember, Open Fire Cooking</a
-        ><br />
-        Founder & Editor-in-Chief – <a
-          href="https://www.instagram.com/gut_geist/?hl=en"
-          target="_blank"
-          class="transition-opacity hover:opacity-60">Gutgeist Magazin</a
-        > – <a
-          href="https://faremag.com/products/gut-geist-the-berlin-issue?srsltid=AfmBOoq5LFLh6m9mO5RpkPXXKSijfX_cy7nben463CG15aLFrJgATYdM"
-          target="_blank"
-          class="transition-opacity hover:opacity-60">Buy</a
-        ><br />
-        Creator & Author – Deutschland, Dein Essen (Documentary, coming soon)
-      </p>
-    </div>
+          <h2 class="sr-only">About Tobias Beck</h2>
+          <p class="max-w-[25em] text-[max(16px,3vw)]">
+            A Berlin-based chef and culinary innovator who is shaping todays and
+            tomorrows culture through his passion for fire-based cooking and a
+            deep appreciation for German cuisine
+          </p>
+        </article>
+      </section>
+
+      <section class="relative mb-2 flex items-center justify-center md:mb-3">
+        <h2
+          class="absolute top-0 left-0 z-10 w-full pt-[50px] text-center text-[max(24px,4vw)]"
+        >
+          Neue deutsche küche
+        </h2>
+        <figure>
+          <Image
+            src={imageDoor}
+            alt="A old-school open wooden Door"
+            loading="lazy"
+            layout="full-width"
+            class="w-full"
+            tabindex="0"
+          />
+          <figcaption class="sr-only">
+            Traditional wooden door representing German heritage
+          </figcaption>
+        </figure>
+
+        <div class="group absolute w-[38%]">
+          <figure>
+            <Image
+              src={imageTobiBallhaus}
+              alt="Tobias Beck wearing a chef's outfit standing in front of the kitchen of Claerchens Ballhaus in Berlin"
+              loading="lazy"
+              layout="constrained"
+              class="fade-in-image w-full"
+              tabindex="0"
+            />
+            <figcaption class="sr-only">
+              Tobias Beck at Claerchens Ballhaus in Berlin
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="bg-black px-[50px] py-[100px] text-center">
+        <h2 class="sr-only">Professional Experience</h2>
+        <p class="text-[max(13px,1.5vw)]">
+          Executive Chef – <a
+            href="https://www.instagram.com/luna.claerchens/"
+            target="_blank"
+            class="transition-opacity hover:opacity-60">Clärchens</a
+          >
+          <a
+            class="transition-opacity hover:opacity-60"
+            href="https://claerchensball.haus/"
+            target="_blank">Ballhaus</a
+          ><br />
+          Founder – <a
+            href="https://ember-ofc.com/"
+            target="_blank"
+            class="transition-opacity hover:opacity-60"
+            >Ember, Open Fire Cooking</a
+          ><br />
+          Founder & Editor-in-Chief – <a
+            href="https://www.instagram.com/gut_geist/?hl=en"
+            target="_blank"
+            class="transition-opacity hover:opacity-60">Gutgeist Magazin</a
+          > – <a
+            href="https://faremag.com/products/gut-geist-the-berlin-issue?srsltid=AfmBOoq5LFLh6m9mO5RpkPXXKSijfX_cy7nben463CG15aLFrJgATYdM"
+            target="_blank"
+            class="transition-opacity hover:opacity-60">Buy</a
+          ><br />
+          Creator & Author – Deutschland, Dein Essen (Documentary, <time
+            datetime="2024">coming soon</time
+          >)
+        </p>
+      </section>
+    </main>
+
     <footer
       class="mb-2 flex flex-col gap-[25vh] bg-black px-[50px] py-[50px] text-[max(13px,1.5vw)] md:mb-3"
     >
-      <div class="flex flex-wrap gap-[0.75em] max-md:justify-center">
+      <nav class="flex flex-wrap gap-[0.75em] max-md:justify-center">
         <a
           class="transition-opacity hover:opacity-60"
           href="https://www.instagram.com/tobiasbeck__/"
@@ -237,10 +309,10 @@ const META_DESCRIPTION =
             hello@gut-geist.com</span
           >
         </span>
-      </div>
-      <div class="flex flex-col gap-[0.75em]">
-        <div class="flex justify-center">Impressum</div>
-        <div class="text-center text-[12px] text-white/50">
+      </nav>
+      <section class="flex flex-col gap-[0.75em]">
+        <h2 class="flex justify-center">Impressum</h2>
+        <address class="text-center text-[12px] text-white/50 not-italic">
           <p class="mr-[10px] md:inline md:whitespace-nowrap">
             <span class="text-white/75">Angaben gemäß § 5 TMG</span> Beck Culinary
             Arts Group UG – Wiener Straße 10 – 10999 Berlin
@@ -259,19 +331,24 @@ const META_DESCRIPTION =
             <span class="text-white/75">FOTO CREDITS:</span>
             Nino Valpiani, Jonas Kolahdoozan, Jose Cuevas
           </p>
-        </div>
-      </div>
+        </address>
+      </section>
     </footer>
-    <video
-      src="/tobias-beck-collecting-herbs.mp4"
-      autoplay
-      muted
-      playsinline
-      loop
-      class="fade-in-image w-full"
-      tabindex="0"
-    >
-    </video>
+    <figure>
+      <video
+        src="/tobias-beck-collecting-herbs.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+        class="fade-in-image w-full"
+        tabindex="0"
+      >
+      </video>
+      <figcaption class="sr-only">
+        Tobias Beck collecting herbs in nature
+      </figcaption>
+    </figure>
 
     <script>
       const targets = Array.from(document.querySelectorAll(".fade-in-image"));
