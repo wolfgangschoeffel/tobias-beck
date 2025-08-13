@@ -280,7 +280,6 @@ const META_DESCRIPTION =
       ) {
         entries.forEach((entry: IntersectionObserverEntry) => {
           if (entry.isIntersecting) {
-            console.log(entry);
             entry.target.classList.add("fade-in");
           }
         });
