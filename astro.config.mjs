@@ -19,5 +19,5 @@ export default defineConfig({
       },
     ],
   },
-  site: "https://tobi.wolfgangschoeffel.com",
+  site: "https://www.beck-tobias.com",
 });
