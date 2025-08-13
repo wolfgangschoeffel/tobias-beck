@@ -2,13 +2,13 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 import { Image } from "astro:assets";
-import imageRogacki from "../img/berlin-rogacki.webp";
-import imageFleischerei from "../img/fleischerei.webp";
-import cloudy1 from "../img/cloudy-1.webp";
-import cloudy2 from "../img/cloudy-2.webp";
-import brezel from "../img/brezel.webp";
-import imageTobiBallhaus from "../img/claerchens-ballhaus-tobi-kuechenaufgang.webp";
-import imageDoor from "../img/door.webp";
+import imageRogacki from "../img/smoked-fish-on-a-tray-at-fish-market-rogacki-in-berlin.webp";
+import imageFleischerei from "../img/traditional-butcher-shop-front-view.webp";
+import cloudy1 from "../img/video-still-of-tobias-beck-inside-of-a-traditional-butcher-shop-tasting-a-meat-ball-1.webp";
+import cloudy2 from "../img/video-still-of-tobias-beck-inside-of-a-traditional-butcher-shop-tasting-a-meat-ball-2.webp";
+import brezel from "../img/detail-shot-of-a-pretzel-hanging-from-a-wooden-stand.webp";
+import imageTobiBallhaus from "../img/tobias-beck-at-claerchens-ballhaus-in-berlin.webp";
+import imageDoor from "../img/old-open-wooden-door.webp";
 import { SITE_URL } from "../utils/constants";
 
 const META_DESCRIPTION =
@@ -89,7 +89,7 @@ const META_DESCRIPTION =
     <div class="grid grid-cols-2">
       <Image
         src={cloudy1}
-        alt="First Video Still with visible OSD of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
+        alt="Video Still of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
         loading="lazy"
         layout="constrained"
         class="fade-in-image w-full"
@@ -98,7 +98,7 @@ const META_DESCRIPTION =
 
       <Image
         src={cloudy2}
-        alt="Second Video Still with visible OSD of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
+        alt="Video Still of Tobias Beck inside of a traditional butcher shop tasting a meat ball."
         loading="lazy"
         layout="constrained"
         class="fade-in-image w-full"
@@ -263,7 +263,7 @@ const META_DESCRIPTION =
       </div>
     </footer>
     <video
-      src="/snippet.mp4"
+      src="/tobias-beck-collecting-herbs.mp4"
       autoplay
       muted
       playsinline
